@@ -1,0 +1,81 @@
+@import "../components/variables";
+
+.swal-modal {
+    will-change: unset !important;
+    border-radius: $border-radius-sm;
+    background-color: $body-bg;
+
+    @media (min-width: 501px) {
+        width: 357px;
+    }
+
+    .swal-icon--success  {
+        &:after, &:before, &__hide-corners {
+            background-color: $body-bg;
+        }
+
+        &:after {
+            left: 29px;
+        }
+
+        &:before {
+            left: -32px;
+        }
+    }
+    .swal-title {
+        color: $gray-900;
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
+
+    .swal-text {
+        font-size: 0.875rem;
+        color: $gray-600;
+    }
+
+    .swal-footer {
+        padding: 1.875rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: -0.625rem;
+        margin-right: -0.625rem;
+        margin-top: 0.625rem;
+
+        .swal-button {
+            font-weight: 400;
+            color: $white;
+
+            @media (min-width: 576px) {
+                font-size: 1rem;
+            }
+
+            @media (max-width: 575px) {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-top: 0;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .swal-button-container {
+            margin-left: 0.625rem;
+            margin-right: 0.625rem;
+
+            .swal-button--cancel {
+                background-color: $gray;
+            }
+
+            .swal-button--confirm {
+                background-color: $red;
+            }
+        }
+    }
+}
+.swal-icon--custom img {
+    width: 62px;
+    height: 80px;
+}

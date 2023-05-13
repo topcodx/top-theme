@@ -1,0 +1,189 @@
+@import "../components/variables";
+
+.daterangepicker {
+    font-family: $primaryFont;
+    box-shadow: $theme-box-shadow;
+    background-color: $body-bg;
+    border: 0;
+    margin-top: 0;
+
+    &:before, &:after {
+        content: none;
+    }
+
+    .drp-calendar {
+        max-width: 288px;
+
+        .calendar-table {
+            .table-condensed {
+                thead {
+                    tr {
+                        &:nth-child(2) th {
+                            font-size: 0;
+                            color: $gray-900;
+                            font-weight: 500;
+
+                            &:first-letter {
+                                font-size: 0.875rem;
+                            }
+                        }
+
+                        .prev span, .next span {
+                            border-right-color: $gray-700;
+                            border-bottom-color: $gray-700;
+                            padding: 0.25rem;
+                        }
+                    }
+
+                    th {
+                        height: 35px;
+                    }
+
+                    .month {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            tr {
+                .available {
+                    color: $gray-700;
+                    font-size: 0.875rem;
+
+                    &:hover {
+                        background: $gray-100;
+                        color: $gray-900;
+                    }
+                }
+
+                .off.ends {
+                    color: $gray-300;
+                    border-color: $body-bg;
+                    background-color: $body-bg;
+                }
+
+                .in-range.available {
+                    background-color: $cyan-100;
+                    color: $cyan;
+                }
+
+                td {
+                    border-radius: 0.313rem;
+                    width: 35px;
+                    height: 35px;
+                }
+
+                td.active {
+                    background-color: $cyan;
+                    color: $white;
+                }
+            }
+
+        }
+    }
+
+    .drp-calendar.left {
+        border-left-color: $gray-200 !important;
+        padding: 0.938rem 0 1.25rem 1.25rem;
+
+        @media (max-width: 729px) {
+            border-left: 0 !important;
+        }
+
+        @media (max-width: 573px) {
+            padding-bottom: 0;
+        }
+
+        .calendar-table {
+            padding-right: 1.25rem;
+        }
+    }
+
+    .calendar-table {
+        border-color: $body-bg;
+        background-color: $body-bg;
+    }
+
+    .drp-calendar.right {
+        padding: 0.938rem 1.25rem 1.25rem;
+    }
+
+    .ranges {
+        padding: 10px 0;
+        margin-top: 0;
+
+        ul {
+            li {
+                font-size: 0.875rem;
+                color: $gray-700;
+                padding-top: 0.656rem;
+                padding-bottom: 0.656rem;
+
+                &:hover {
+                    background-color: $gray-100;
+                    color: $gray-900;
+                }
+            }
+
+            li.active {
+                background-color: $cyan;
+                color: $white;
+            }
+        }
+    }
+
+    .drp-buttons {
+        border-top-color: $gray-200;
+        border-bottom-color: $gray-200;
+        padding: 1.25rem;
+
+        .drp-selected {
+            width: calc(100% - 227px);
+            text-align: left;
+            font-size: 1rem;
+            color: $gray-900;
+
+            @media (max-width: 563px) {
+                width: 100%;
+                margin-bottom: 0.938rem;
+            }
+        }
+
+        .btn.btn-sm {
+            font-size: 1rem;
+            font-weight: 400;
+            padding: 0.594rem 1.563rem;
+        }
+
+        .btn-default {
+            background-color: $gray;
+            color: $white;
+        }
+    }
+}
+
+.show-calendar {
+    .drp-buttons {
+        display: flex !important;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media (max-width: 563px) {
+            justify-items: center;
+        }
+
+        .drp-selected {
+            order: 0;
+        }
+
+        .cancelBtn {
+            order: 2;
+            margin-left: 1.25rem;
+        }
+
+        .applyBtn {
+            order: 1;
+            margin-left: 0;
+        }
+    }
+}

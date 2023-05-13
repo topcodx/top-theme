@@ -1,0 +1,12 @@
+@import "../components/variables";
+
+$s2bs5-item-hover-bg: $cyan-200 !default;
+$s2bs5-focus-border-color: $gray-400 !default;
+
+@import "~select2-bootstrap-5-theme/src/select2-bootstrap-5-theme";
+
+.select2-container{ width: 100% !important; }
+
+.select2-container--bootstrap-5 .select2-selection--single {
+    background-size: 18px 20px;
+}

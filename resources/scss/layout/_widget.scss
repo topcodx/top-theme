@@ -1,0 +1,21 @@
+@import "../components/variables";
+
+.widget {
+    .widget-icon {
+        width: 80px;
+        height: 80px;
+        min-width: 80px;
+
+        @media (max-width: 1399px) and (min-width: 1200px) {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+        }
+
+        @media (max-width: 480px) {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+        }
+    }
+}

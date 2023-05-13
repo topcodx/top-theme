@@ -1,0 +1,191 @@
+@import "../components/variables";
+
+.fc-media-screen {
+    .fc-header-toolbar {
+        flex-wrap: wrap;
+
+        .fc-toolbar-chunk {
+            width: 33.33%;
+
+            .fc-toolbar-title {
+                font-size: 1.25rem  ;
+            }
+
+            &:nth-child(1) {
+                @media (max-width: 991px) {
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            &:nth-child(2) {
+                position: relative;
+                text-align: center;
+
+                @media (max-width: 991px) {
+                    width: 230px;
+                }
+
+                .btn-group {
+                    display: flex;
+                    align-items: center;
+                    width: 230px;
+                    margin: auto;
+                }
+
+                .fc-prev-button, .fc-next-button {
+                    position: absolute;
+                    top: 0;
+                    line-height: 10px;
+                    padding: 0.625rem 1rem;
+                    width: 44px;
+                    height: 44px;
+                    border-radius: $border-radius;
+                }
+
+                .fc-prev-button {
+                    left: 0;
+                }
+
+                .fc-next-button {
+                    right: 0;
+                }
+            }
+
+            &:nth-child(3) {
+                @media (min-width: 676px) {
+                    text-align: right;
+                }
+
+                @media (max-width: 991px) {
+                    width: 50%;
+                }
+
+                @media (max-width: 675px) {
+                    width: 100%;
+                    margin-top: 1rem;
+                }
+
+                .btn-primary {
+                    @media (max-width: 575px) {
+                        font-size: 0.875rem;
+                        padding: 0.625rem;
+                    }
+                }
+            }
+
+            .btn-primary {
+                background-color: $gray-200;
+                border-color: $gray-200;
+                color: $gray-600;
+                text-transform: capitalize;
+
+                &:hover, &.active {
+                    background-color: $cyan;
+                    border-color: $cyan;
+                    color: $white;
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:before {
+                        font-weight: 600 !important;
+                    }
+                }
+            }
+
+            .fc-today-button {
+                margin: 0;
+            }
+        }
+    }
+
+    .fc-view-harness {
+        .fc-view {
+            .fc-scrollgrid {
+                .fc-scrollgrid-section-body {
+                    .fc-day-other {
+                        .fc-daygrid-day-top {
+                            opacity: 1;
+                            color: $gray;
+                        }
+                    }
+
+                    .fc-daygrid-day-top {
+                        flex-direction: revert;
+                        padding-left: 1rem;
+                        padding-top: 1rem;
+                    }
+
+                    .fc-h-event {
+                        background-color: $cyan-100;
+                        border-color: $cyan-200;
+                        color: $cyan;
+                        border-radius: $border-radius;
+                    }
+
+                    .fc-daygrid-block-event .fc-event-title {
+                        color: $cyan;
+                        padding: 0.625rem;
+                        font-size: 0.875rem;
+                    }
+
+                    .fc-timegrid-slot {
+                        height: 1.875rem;
+                    }
+
+                    .fc-timegrid-slot-label-frame {
+                        color: $gray-600;
+                        text-transform: uppercase;
+                        text-align: left;
+                    }
+
+                    .fc-timegrid-axis-cushion {
+                        color: $gray-600;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            table {
+                .fc-col-header {
+                    thead {
+                        background-color: $gray-100;
+
+                        tr {
+                            th {
+                                text-transform: uppercase;
+                                text-align: left;
+                                font-weight: 400;
+                                color: $gray-600;
+
+                                @media (min-width: 576px) {
+                                    padding: 0.75rem;
+                                }
+
+                                @media (max-width: 575px) {
+                                    font-size: 0.75rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                tr {
+                    &:last-child {
+                        td {
+                            border-bottom: 1px solid $gray-300;
+                        }
+                    }
+                }
+            }
+
+            table, td, th {
+                border-color: $gray-300;
+            }
+        }
+    }
+}

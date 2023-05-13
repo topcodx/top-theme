@@ -1,0 +1,94 @@
+@import "../components/variables";
+
+.dataTables_filter {
+    display: none !important;
+}
+
+table.table-striped.dataTable {
+
+    tr {
+        th, td {
+            border-bottom: 1px solid $gray-200;
+            padding: 0.625rem 0.25rem 0.625rem 1.875rem !important;
+            font-weight: 400;
+        }
+    }
+
+    tbody {
+        tr {
+            &.even {
+                background-color: $gray-100;
+            }
+        }
+    }
+}
+
+.dataTables_wrapper {
+    div.dataTables_paginate {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        padding-top: 0;
+
+        .paginate_button {
+            border-radius: 0.313rem;
+            padding: 0.313rem;
+            color: $gray-600 !important;
+
+            @media (min-width: 1500px) {
+                font-size: 1rem;
+            }
+        }
+
+        .paginate_button.current , .paginate_button.current:hover, .paginate_button.current:focus, .paginate_button.current:active {
+            background: $primary;
+            color: $white !important;
+            border-color: $primary;
+        }
+
+        .paginate_button {
+            &:hover, &:active, &:focus {
+                background: $gray-200;
+                color: $primary !important;
+                border-color: $gray-200;
+                box-shadow: none;
+            }
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            > .paginate_button {
+                min-width: 38px;
+                height: 38px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @media (max-width: 1499px) {
+                    min-width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+
+    .dataTables_length {
+        .form-select {
+            border: 0;
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.5rem !important;
+        }
+    }
+
+    .dataTables_processing {
+        background: $body-bg;
+        color: $gray-900;
+    }
+
+    .bottom {
+        padding-top: 1.75rem;
+    }
+}
